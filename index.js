@@ -10,6 +10,11 @@ const port = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
+//auth api
+app.post('/jwt', async (req, res) => {
+  
+})
+
 app.get("/", async (req, res) => {
   res.send("Concept practice server is running");
 });
