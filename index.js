@@ -2,14 +2,19 @@ import cors from "cors";
 import express from "express";
 import dotenv from "dotenv";
 import jwt from "jsonwebtoken";
+import cookieParser from "cookie-parser";
 
 dotenv.config();
 const app = express();
 const port = process.env.PORT || 5000;
 
 //Middlewares
-app.use(cors());
+app.use(cors({
+  origin: ['http://localhost:5173']
+  
+}));
 app.use(express.json());
+app.use(cookieParser())
 
 //auth api
 app.post("/jwt", async (req, res) => {
