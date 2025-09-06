@@ -33,6 +33,16 @@ app.post("/jwt", async (req, res) => {
     .send({ success: true });
 });
 
+//logut
+app.post("/logout", (req, res) => {
+  res
+    .clearCookie("token", {
+      httpOnly: true,
+      secure: false,
+    })
+    .send({ success: true });
+});
+
 app.get("/", async (req, res) => {
   res.send("Concept practice server is running");
 });
