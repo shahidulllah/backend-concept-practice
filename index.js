@@ -33,8 +33,8 @@ app.post("/jwt", async (req, res) => {
     .send({ success: true });
 });
 
-//logut
-app.post("/logout", (req, res) => {
+//logout
+app.post("/logout", async (req, res) => {
   res
     .clearCookie("token", {
       httpOnly: true,
