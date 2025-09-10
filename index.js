@@ -60,7 +60,7 @@ app.post("/logout", async (req, res) => {
     .send({ success: true });
 });
 
-app.get("/", verifyToken, async (req, res) => {
+app.get("/", async (req, res) => {
   res.send("Concept practice server is running");
 });
 
