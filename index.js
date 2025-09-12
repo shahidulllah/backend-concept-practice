@@ -59,6 +59,9 @@ app.post("/logout", async (req, res) => {
     })
     .send({ success: true });
 });
+app.get("/posts", async(req, res) =>{
+  console.log(req.body);
+} )
 
 app.get("/", async (req, res) => {
   res.send("Concept practice server is running");
