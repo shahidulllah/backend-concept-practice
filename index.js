@@ -59,6 +59,7 @@ app.post("/logout", async (req, res) => {
     })
     .send({ success: true });
 });
+
 app.get("/posts", async (req, res) => {
   console.log(req.body);
 });
