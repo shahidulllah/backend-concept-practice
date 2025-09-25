@@ -64,6 +64,7 @@ app.get("/posts", async (req, res) => {
   console.log(req.body);
 });
 
+//Checking
 app.get("/", async (req, res) => {
   res.send("Concept practice server is running");
 });
