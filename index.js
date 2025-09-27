@@ -47,7 +47,7 @@ app.post("/jwt", async (req, res) => {
       httpOnly: true,
       secure: false,
     })
-    .send({ success: true });
+    .send({ success: true, message: "Token stored" });
 });
 
 //logout
