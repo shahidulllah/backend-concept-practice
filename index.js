@@ -18,7 +18,7 @@ app.use(
 app.use(express.json());
 app.use(cookieParser());
 
-//Token verify
+//Token verification api
 const verifyToken = (req, res, next) => {
   const token = req.cookies?.token;
 
@@ -50,7 +50,7 @@ app.post("/jwt", async (req, res) => {
     .send({ success: true, message: "Token stored" });
 });
 
-//logout
+//logout api
 app.post("/logout", async (req, res) => {
   res
     .clearCookie("token", {
@@ -60,8 +60,7 @@ app.post("/logout", async (req, res) => {
     .send({ success: true });
 });
 
-
-//Checking
+//Checking route
 app.get("/", async (req, res) => {
   res.send("Concept practice server is running");
 });
